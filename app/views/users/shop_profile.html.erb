@@ -1,0 +1,35 @@
+
+<div class="shop">
+
+<h2>Choisissez un peepeeroom</h2>
+
+<%= form_for(@user) do |f| %>
+
+
+  <div class="field">
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true %>
+  </div>
+
+   <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.telephone_field :phone_number, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :schedule %><br />
+    <%= f.text_field :schedule %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Envoyer" %>
+  </div>
+<% end %>
+
+<%= link_to "Retour", :back %>
+</div>

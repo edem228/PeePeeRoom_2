@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *= require_tree .
+ *= require_self
+ 
+
+ */
+
+
+
+body {
+  background-color: #3D003D;
+  text-align: center;
+}
+
+.navbar {
+  height:120px;
+  background-color: black;
+  margin:-25px;
+  position: relative;
+  border-bottom: 2px solid #fff;
+}
+
+
+
+
+
+h1 { 
+  color: #FF3399;
+  font-size: 50px;
+  text-align:  center;
+  margin-left: 300px;
+}
+
+h3{
+  color: #FF3399;
+}
+
+h2 {
+  color:#fff;
+}
+
+label {
+  color: #fff;
+
+}
+
+p {
+  color: #fff;
+}
+
+em {
+ color:#fff;
+}
+
+a {
+ color: #FF3399;
+ text-decoration: none;
+}
+
+input {
+  margin-bottom: 15px;
+  width: 200px;
+  height: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+button  {
+  display:inline-block;
+  width:150px;
+  height: 30px;
+  float: right;
+  margin-right: 30px;}
+
+.btn {
+
+  margin-bottom: 30px;
+}
+
+h1, .btn {
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.edit 
+.sign 
+.new 
+.unlock 
+.client 
+.shop {
+  margin-top: 30px;
+}
+
+
+.company_edit {
+  margin-left: 200px;
+}
+
+
+.notice {
+  margin-top: 50px;
+}

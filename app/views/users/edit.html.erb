@@ -1,0 +1,42 @@
+<div class="complet">
+  <h2>Complétez votre profile </h2>
+
+<%= form_for(@user) do |f| %>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nom %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prenom %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Pseudo %><br />
+    <%= f.text_field :nickname %>
+  </div>
+
+  <div class="field_radio">
+    <p>Je propose des PeePeeRoom</p>
+    <%= f.label :Oui %>
+    <%= f.radio_button :shop, "1" %>
+    <%= f.label :Non %>
+    <%= f.radio_button :shop, "0" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Envoyer"  %>
+  </div>
+<% end %>
+
+<%= link_to "Retour", :back %>
+</div>
