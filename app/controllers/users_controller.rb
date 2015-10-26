@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       if current_user[:shop]
         redirect_to new_company_path
       else
-        redirect_to companies_path
+        redirect_to users_path
       end
     else
       render :edit
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name, :nickname, :age , :first_name, :shop)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name, :nickname, :first_name, :shop)
   end
 
 

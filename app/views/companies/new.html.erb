@@ -1,4 +1,9 @@
-<%= form_for @company do |f| %>
+<%= form_for @company, html: { multipart: true } do |f| %>
+
+  <div class="field">
+    <%= f.label  :Photo_de_votre_deventure %><br />
+    <%= f.file_field :image %>
+  </div>
 
    <div class="field">
     <%= f.label :Nom_du_commerce %><br />
@@ -24,3 +29,6 @@
     <%= f.submit "Envoyer" %>
   </div>
 <% end %>
+
+
+

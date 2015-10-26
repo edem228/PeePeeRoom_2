@@ -18,7 +18,7 @@
 
 
 body {
-  background-color: #3D003D;
+  background-color: #fff;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ body {
   background-color: black;
   margin:-25px;
   position: relative;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid gre black;
 }
 
 
@@ -35,35 +35,35 @@ body {
 
 
 h1 { 
-  color: #FF3399;
+  color: lightgreen;
   font-size: 50px;
   text-align:  center;
   margin-left: 300px;
 }
 
 h3{
-  color: #FF3399;
+  color: green;
 }
 
 h2 {
-  color:#fff;
+  color: black;
 }
 
 label {
-  color: #fff;
+  color:  black;
 
 }
 
 p {
-  color: #fff;
+  color:  black;
 }
 
 em {
- color:#fff;
+ color: black;
 }
 
 a {
- color: #FF3399;
+ color: green;
  text-decoration: none;
 }
 
@@ -111,4 +111,11 @@ h1, .btn {
 
 .notice {
   margin-top: 50px;
+}
+
+.style_image{
+  width: 200px;
+  height: auto;
+  float: left;
+  margin-left: 20px;
 }

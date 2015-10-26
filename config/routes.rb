@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   #resources :shops
   resources :users
+  
 
   get 'users/shop_profle' => 'users#shop_profile'
   get 'users/client_profle' => 'users#client_profile'

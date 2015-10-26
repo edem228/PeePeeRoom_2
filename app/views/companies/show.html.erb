@@ -4,9 +4,16 @@
 
 <div class="company_create">
     <h3><%= @company.name %></h3>
-    <p>
-      <%= @company.address %> ouvert de <%= @company.schedule %>
-    </p>
+
+    
+  <p>
+  <%= @company.address %> ouvert de <%= @company.schedule %>
+  </p>
+
+  <div class="shop_image">
+  <%= image_tag @company.image, :class => "style_image"%>
+  </div>
+
   <div style='width: 800px; margin: auto;'>
     <div id="map" style='width: 900px; height: 400px;'>
     </div>
