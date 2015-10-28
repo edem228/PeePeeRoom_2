@@ -113,9 +113,16 @@ h1, .btn {
   margin-top: 50px;
 }
 
-.style_image{
-  width: 200px;
+.shop_image{
+  width: 300px;
   height: auto;
   float: left;
+  margin-left: 20px;
+  border: 1px solid green;
+}
+
+.style_image {
+  width:200px;
+  height: auto;
   margin-left: 20px;
 }

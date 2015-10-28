@@ -2,17 +2,24 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 
 
-<div class="company_create">
-    <h3><%= @company.name %></h3>
 
-    
-  <p>
-  <%= @company.address %> ouvert de <%= @company.schedule %>
-  </p>
+
+
+
+
+<div class="company_create">
 
   <div class="shop_image">
-  <%= image_tag @company.image, :class => "style_image"%>
+    <h3><%= @company.name %></h3>
+
+    <%= image_tag @company.image, :class => "style_image" %>
+    
+    <p><%= @company.address %></p> 
+    <p><%= @company.schedule %></p>
   </div>
+
+
+  
 
   <div style='width: 800px; margin: auto;'>
     <div id="map" style='width: 900px; height: 400px;'>
@@ -35,6 +42,16 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         "height": 37
       },
       "infowindow": "<%= @company.name %><br />Télépnone: <%= @company.phone_number %><br />"
+    },
+    {
+      "lat": 45,
+      "lng": 1,
+      "zoom": 20,
+      "picture": {
+        "url": "http://googlemaps.googlermania.com/google_maps_api_v3/en/Google_Maps_Marker.png",
+        "width": 37,
+        "height": 37
+      }
     }
   ]);
   handler.bounds.extendWith(markers);
