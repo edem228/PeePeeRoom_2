@@ -131,3 +131,9 @@ h1, .btn {
   height: auto;
   margin-left: 20px;
 }
+
+.list_magasins {
+
+  float:left;
+  display: block;
+}

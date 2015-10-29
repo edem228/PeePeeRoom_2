@@ -3,24 +3,29 @@
 
 
 
-<div class="company_index">
 
 
-  <div class="row">
 
-  <h2>Liste des PeePeeRoom</h2></br>
-    <div style='width: 800px; margin: auto;'>
+<div class="row">
+
+<h2>Liste des PeePeeRoom</h2></br>
+
+  <div style='width: 800px; margin: auto;' class="col-lg-8 col-md-8 col-xs-12">
     <div id="map" style='width: 900px; height: 400px;'>
     </div>
   </div>
+
+  <div class="list_magasins col-lg-4 col-md-4 col-xs-12">
+    <% @companies.each do |c| %>
+    <%= link_to c.name, company_path(c) %></br>
+  </div>
+
 </div>
 
-  
-   <% @companies.each do |c| %>
-  
-       <%= link_to c.name, company_path(c) %>
 
-       <script types="text/javascript">handler = Gmaps.build('Google');
+
+
+<script types="text/javascript">handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, 
 
   function(){
@@ -35,25 +40,13 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}},
         "height": 37
       },
       "infowindow": "<%= c.name %><br />Télépnone: <%= c.phone_number %><br />"
-    },
-    {
-      "lat": 45,
-      "lng": 1,
-      "zoom": 20,
-      "picture": {
-        "url": "http://googlemaps.googlermania.com/google_maps_api_v3/en/Google_Maps_Marker.png",
-       "width": 37,
-        "height": 37
-      },
-      "infowindow": " Vous êtes ici"
     }
   ]);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
+
 </script>
-
-
 
     <% end %> 
 

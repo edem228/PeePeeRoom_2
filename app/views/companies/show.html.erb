@@ -21,11 +21,6 @@
 
   
 
-  <div style='width: 800px; margin: auto;'>
-    <div id="map" style='width: 900px; height: 400px;'>
-    </div>
-  </div>
-</div>
 
 <%=link_to "retour à la liste", companies_path %>
 
@@ -44,20 +39,16 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         "height": 37
       },
       "infowindow": "<%= @company.name %><br />Télépnone: <%= @company.phone_number %><br />"
-    },
-    {
-      "lat": 45,
-      "lng": 1,
-      "zoom": 20,
-      "picture": {
-        "url": "http://googlemaps.googlermania.com/google_maps_api_v3/en/Google_Maps_Marker.png",
-       "width": 37,
-        "height": 37
-      },
-      "infowindow": " Vous êtes ici"
     }
   ]);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
 });
 </script>
+
+  <div style='width: 800px; margin: auto;'>
+    <div id="map" style='width: 900px; height: 400px;'>
+    </div>
+  </div>
+</div>
+<% end %>
