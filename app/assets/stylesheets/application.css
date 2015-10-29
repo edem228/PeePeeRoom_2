@@ -62,9 +62,14 @@ em {
  color: black;
 }
 
-a {
- color: green;
+button a {
+ color: #fff;
  text-decoration: none;
+}
+
+
+a {
+  color:green;
 }
 
 input {

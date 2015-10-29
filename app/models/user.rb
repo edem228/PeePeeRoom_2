@@ -5,6 +5,11 @@ class User < ActiveRecord::Base
      
 
          :recoverable, :rememberable, :trackable, :validatable
+
+  geocoded_by :ip_address,
+ :latitude => :lat, :longitude => :lon
+ 
+after_validation :geocode
 end
 
 

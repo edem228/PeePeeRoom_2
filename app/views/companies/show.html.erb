@@ -16,7 +16,7 @@
     
     <p><%= @company.address %></p> 
     <p><%= @company.schedule %></p>
-  </div>
+</div>
 
 
   
@@ -26,6 +26,8 @@
     </div>
   </div>
 </div>
+
+<%=link_to "retour à la liste", companies_path %>
 
 
 
@@ -49,9 +51,10 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
       "zoom": 20,
       "picture": {
         "url": "http://googlemaps.googlermania.com/google_maps_api_v3/en/Google_Maps_Marker.png",
-        "width": 37,
+       "width": 37,
         "height": 37
-      }
+      },
+      "infowindow": " Vous êtes ici"
     }
   ]);
   handler.bounds.extendWith(markers);
