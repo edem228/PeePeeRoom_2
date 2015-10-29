@@ -28,6 +28,8 @@
 
 
 
+
+
   <% end %>
         
 
@@ -38,6 +40,9 @@
 
 <%= yield %>
 
+<% if controller_name == "users" %>
+<%= link_to" afficher les PeePeeRoom", companies_path %>
+<% end %>
 
 
 </body>

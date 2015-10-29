@@ -5,10 +5,10 @@
   <div class="row">
 
   <h2>Liste des PeePeeRoom</h2></br>
+  
    <% @companies.each do |c| %>
   
        <%= link_to c.name, company_path(c) %><br /><br />
-
 
     <% end %> 
   </div>
